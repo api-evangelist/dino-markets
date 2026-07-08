@@ -1,0 +1,76 @@
+name: dino.markets
+description: >-
+  Real-time cross-venue sports prediction-market data. Matches the same game across Kalshi and Polymarket, computes live
+  cross-venue arbitrage sized to fillable depth, and streams it via REST, WebSocket, and a native MCP server. Operated
+  by Nusantara Ventures LLC. Not a broker; not financial advice.
+url: https://dino-markets.apievangelist.com/apis.yml
+created: '2026-07-08'
+modified: '2026-07-08'
+specificationVersion: '0.21'
+tags:
+  - prediction-markets
+  - sports
+  - arbitrage
+  - kalshi
+  - polymarket
+  - trading
+  - real-time
+  - websocket
+  - mcp
+  - agent-native
+apis:
+  - name: dino.markets REST API
+    description: >-
+      Versioned REST API (/v2/) for matched cross-venue market catalog, priced arbitrage view, pair history, leagues,
+      coverage, bad-arb reporting, and stream-ticket minting. Bearer API key auth (sk_live_).
+    humanURL: https://dino.markets/docs
+    baseURL: https://api.dino.markets
+    tags:
+      - prediction-markets
+      - sports
+      - arbitrage
+      - kalshi
+      - polymarket
+      - trading
+      - real-time
+      - websocket
+      - mcp
+      - agent-native
+    properties:
+      - type: OpenAPI
+        url: https://api.dino.markets/openapi.json
+      - type: Documentation
+        url: https://dino.markets/docs
+      - type: Documentation
+        url: https://dino.markets/docs/quickstart
+  - name: dino.markets MCP Server
+    description: >-
+      Native hosted Streamable HTTP MCP server exposing 7 tools (list_markets, find_arbitrage, get_market, list_leagues,
+      get_coverage, report_bad_arb, watch_markets). Accepts the same sk_live_ API key. Free tool listing on every plan;
+      returned data is tier-gated.
+    humanURL: https://dino.markets/docs
+    baseURL: https://api.dino.markets
+    tags:
+      - prediction-markets
+      - sports
+      - arbitrage
+      - kalshi
+      - polymarket
+      - trading
+      - real-time
+      - websocket
+      - mcp
+      - agent-native
+    properties:
+      - type: MCP
+        url: https://api.dino.markets/v2/mcp/
+      - type: LLMSTxt
+        url: https://dino.markets/llms.txt
+maintainers:
+  - FN: Nusantara Ventures LLC
+    url: https://dino.markets
+generated:
+  by: apis.io/add
+  model: claude-opus-4-8
+  confidence: 90
+  at: '2026-07-08T11:46:15.129Z'
