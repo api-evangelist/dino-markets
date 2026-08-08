@@ -74,7 +74,7 @@ apis:
       - mcp
       - agent-native
     properties:
-      - type: MCP
+      - type: MCPServer
         url: https://api.dino.markets/v2/mcp/
       - type: LLMSTxt
         url: https://dino.markets/llms.txt
